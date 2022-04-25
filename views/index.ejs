@@ -8,8 +8,16 @@
     <title>todo list</title>
 </head>
 <body>
-    <h1>hello world</h1>
-
+    
+    <form action="/create" method="post">
+        <input type="text" name="task" id="task" placeholder="insira uma tarefa">
+        <button dir="addButton" type="submit"> Adicionar</button>
+    </form>
+    <ul>
+        <% taskList.forEach((task) =>{ %>
+        <li><%= task.task %> | <%= task.date.toLocaleDateString('pt-PT') %></li>
+        <% }) %>
+    </ul>
     <script src="script.js"></script>
 </body>
 </html>
