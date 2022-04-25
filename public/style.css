@@ -70,6 +70,7 @@ ul li a{
     text-decoration: none;
     color:#fff;
     font-size: 1.3rem;
+    padding-left: 2rem;
 }
 ul li a span{
     color:#ccc;
@@ -227,4 +228,32 @@ span#close-message{
 }
 span#close-message:hover{
     color:rgb(255,0,0);
+}
+
+.check-true{
+    
+    color: #fff;
+    text-decoration: line-through;
+}
+a.check-true::before{
+    content: "";
+    position: absolute;
+    border: 1px solid #fff;
+    top:22px;
+    left:16px;
+    height: 15px;
+    width: 7px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+a.check-false::before{
+    content: "";
+    position: absolute;
+    border: 1px solid #fff;
+    top:22px;
+    left:16px;
+    height: 16px;
+    width: 16px;
+    border-width:2px;
+    
 }

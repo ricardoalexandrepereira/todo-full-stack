@@ -9,6 +9,7 @@ const getAllTasks = async (req, res) => {
       message = "";
     }, 1000);
     const taskList = await Task.find();
+
     return res.render("index", {
       taskList,
       task: null,
@@ -79,10 +80,29 @@ const deleteOneTask = async (req, res) => {
   }
 };
 
+const taskCheck = async (req, res) => {
+  try {
+    const task = await Task.findOne({ _id: req.params.id });
+
+    task.check ? task.check = false : task.check = true;
+
+    /*if (task.check) {
+      task.check = false;
+    } else {
+      task.check = true;
+    }*/
+    await Task.updateOne({ _id: req.params.id }, task);
+    res.redirect("/");
+  } catch (err) {
+    res.status(500).send({ error: err.message });
+  }
+};
+
 module.exports = {
   getAllTasks,
   createTask,
   getById,
   updateOneTask,
   deleteOneTask,
+  taskCheck,
 };
