@@ -9,8 +9,18 @@
     <title>todo list</title>
 </head>
 <body>
+
+        
+        <% if(message != ""){ %>
+        <section class="message message-<%= type %>">
+            <p><%= message %></p>
+            <span id="close-message"><i class="bi bi-x"></i> </span>
+        </section>
+        <% } %>
+
     <header>
-        <% if (task == null){%>
+
+        <% if (task==null){%>
             <h1>To Do List</h1>
             <form action="/create" method="post">
                 <input type="text" name="task" id="task" placeholder="insira uma tarefa">
