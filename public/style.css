@@ -1,3 +1,196 @@
-h1{
-    color:red;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Oswald', times;
+}
+body{
+    background-color: #202024;
+    width: 100%;
+    height: 100%;
+    color:#fff;
+}
+header{
+    background-color: #005290;
+    padding: 3rem;
+    margin: .5rem;
+    text-align: center;
+}
+header h1{
+    padding-bottom: 3rem;
+}
+input{
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: .5rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #202024;
+    color:#fff;
+}
+button{
+    padding: .6rem;
+    width:20%;
+    background-color: #202024;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: .9rem;
+    cursor: pointer;
+    border-radius: 0;
+    transition : all .3s ease-in-out;
+
+}
+button:hover{
+    background-color: green;
+}
+section#tasks{
+    margin: .5rem;
+}
+ul{
+    list-style: none;
+}
+
+ul li{
+    position: relative;
+    padding: 1rem;
+    background-color: #18181c;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+}
+
+ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.3rem;
+}
+ul li a span{
+    color:#ccc;
+    font-style: italic;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+}
+
+ul li:nth-child(odd){
+    background-color: #202024;
+}
+ul li:hover{
+    background-color: rgb(120, 120, 120);
+}
+a#btnUpdate{
+    padding: .5rem;
+    text-decoration: none;
+    color:#ccc;
+    transition: all .3s ease-in-out;
+}
+a#btnUpdate:hover{
+    background-color: #005290;
+    color:#fff;
+
+}
+a#btnDelete{
+    padding: .5rem;
+    text-decoration: none;
+    color:#ccc;
+    transition: all .3s ease-in-out;
+}
+a#btnDelete:hover{
+    background-color: #c90606;
+    color:#fff;
+}
+
+section#modal{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: #00000080;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+#card{
+width: 30rem;
+position: relative;
+background-color: #09090a;
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+#card h2{
+padding: 2rem;
+margin: 0;
+}
+
+#card #close{
+    
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+#card #close:hover{
+    background-color: #c90606;
+    border-radius: 5rem;
+    padding: 0 .3rem;
+}
+#card hr{
+    width: 90%;
+    margin:0 auto;
+    border: 1px solid #005290;
+}
+
+#card p{
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+}
+#card #btns{
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    align-items: center;
+}
+#btns a{
+    text-decoration: none;
+    padding: .9rem;
+    width: 7rem;
+    text-align: center;
+    background-color: #09090a;
+}
+#btnNot{
+    color: #c90606;
+    border: 1px solid #c90606;
+    margin-right: 1rem;
+    transition: all .3s ease-in-out;
+}
+#btnNot:hover{
+    color: #fff;
+    background-color:#c90606;
+}
+#btnYes{
+    color: #1b9412;
+    border: 1px solid #1b9412;
+    margin-right: 1rem;
+    transition: all .3s ease-in-out;
+}
+#btnYes:hover{
+    color: #fff;
+    background-color:#1b9412;
+    
 }
